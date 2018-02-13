@@ -1,0 +1,56 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 16px;
+	font-family: "Times New Roman", Times, serif;
+	background: #f3f3f3;
+}
+header{
+	background: #fff;
+	border-bottom: 1px solid #d8d8d8;
+	height: 50px;
+}
+nav{
+	float: right;
+	padding: 10px 0;
+}
+/*Formatar links*/
+a{
+	text-decoration: none;
+	padding: 10px 5px;
+}
+/*Links não visitados*/
+a:link{
+	color: #838383;
+}
+/*Links visitados*/
+a:visited{
+	color: #838383;
+}
+/*Links hover (passar mouse)*/
+a:hover{
+	color: #fff;
+	background: #b9c941;
+}
+/*Links ativos*/
+a:active{
+	color: #535353;
+}
+
+#areaNavegacao{
+	width: 60%;
+	margin: 0 auto;
+	padding-top: 5px;
+}
+#logo{
+	float:left;
+}
+.verde{
+	color: #b9c941;
+}
+.imagemPostagem{
+	width: 150px;
+	height: 100px;
+}

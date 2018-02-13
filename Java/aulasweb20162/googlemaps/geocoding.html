@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Geocoding Example</title>
+
+    <!-- Load the Google Maps API JavaScript 
+         Note: the sensor attribute is required  -->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+    <script type="text/javascript">
+<!--
+    var map;
+    var geocoder;
+
+    function initialize() {
+       var latlng = new google.maps.LatLng(36.8804, -76.3081);
+
+       // Setup options for the map
+       var options = {
+        zoom: 12,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+       };
+
+       // create the map
+       map = new google.maps.Map(document.getElementById("map"), options);
+
+       geocoder = new google.maps.Geocoder();
+
+    }
+
+    function codeAddress() {
+      var address = document.getElementById ("address").value;
+
+      if (geocoder) {
+        geocoder.geocode ({address: address}, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+	      var position = results[0].geometry.location;
+              map.setCenter(position);
+	      var marker = new google.maps.Marker ({map: map, 
+                                                    position: position});
+            } else {
+                alert ("Geocode was not successful because " + 
+                       status);
+            }
+        });
+     }
+    }
+-->
+</script>
+</head>
+
+<body onload="initialize()">
+
+  <h1>Geocoding Example</h1>
+
+    <form action="">
+      <p>
+        <input type="text" size="60" id="address" value="4700 Elkhorn Avenue, Norfolk, VA" />
+        <input type="button" value="Go!" onclick="codeAddress()"/>
+      </p>
+
+      <div id="map" style="width: 100%; height: 500px"></div>
+    </form>
+
+  </body>
+</html>
+
+

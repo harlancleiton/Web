@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="1.2" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+
+<!-- Navegação genérica para catálogo de produtos. -->
+<navigation-rule>
+    <navigation-case>
+        <description>Exibe o catálogo de produtos</description>
+        <from-outcome>catalogo</from-outcome>
+        <to-view-id>/catalogo.jsp</to-view-id>
+    </navigation-case>
+</navigation-rule>
+<!-- Regras de navegação para o catálogo de produtos. -->
+<navigation-rule>
+    <from-view-id>/catalogo.jsp</from-view-id>
+    <navigation-case>
+        <description>Exibe o carrinho de compras</description>
+        <from-outcome>vercarrinho</from-outcome>
+        <to-view-id>/carrinho.jsp</to-view-id>
+    </navigation-case>
+</navigation-rule>
+<!-- Backing Bean das operações no catálogo de produtos. -->
+<managed-bean>
+    <managed-bean-name>catalogo</managed-bean-name>
+    <managed-bean-class>bean.CatalogoBean</managed-bean-class>
+    <managed-bean-scope>application</managed-bean-scope>
+</managed-bean>
+<!-- Backing Bean das operações no carrinho de compras. -->
+<managed-bean>
+    <managed-bean-name>carrinhoBean</managed-bean-name>
+    <managed-bean-class>bean.CarrinhoBean</managed-bean-class>
+    <managed-bean-scope>application</managed-bean-scope>
+</managed-bean>
+<!-- Backing Bean de produto. -->
+<managed-bean>
+    <managed-bean-name>produtoBean</managed-bean-name>
+    <managed-bean-class>modelo.Produto</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+</managed-bean>
+<!-- Carrinho de compras na sessão do usuário. -->
+<managed-bean>
+<description>
+Cria um carrinho de compras na sessão na primeira vez que ele é
+referenciado.
+</description>
+    <managed-bean-name>carrinhoCompras</managed-bean-name>
+    <managed-bean-class>modelo.CarrinhoCompras</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+</managed-bean>
+
+</faces-config>

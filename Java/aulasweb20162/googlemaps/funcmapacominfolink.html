@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Google Maps JavaScript API Example: Simple Map</title>
+    
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+<script type="text/javascript">
+    var map;
+ 
+    function initialize() {
+         var myLatlng = new google.maps.LatLng(-12.970382,-38.512382); 
+        var myOptions = { 
+            zoom: 4, 
+            center: myLatlng, 
+            mapTypeId: google.maps.MapTypeId.ROADMAP 
+        } 
+
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
+
+        var contentString = '<div id="content">'+ 
+        '<div id="link">'+ 
+        '</div>'+ 
+        '<h1 id="firstHeading" class="firstHeading">Slvador</h1>'+ 
+        '<div id="bodyContent">'+ 
+        '<p><b>Teste</b>Teste <b>TesteB</b>,' +
+        '<p>link, <a href="link">'+ 
+        'link</p>'+ 
+        '</div>'+ 
+        '</div>'; 
+
+        var infowindow = new google.maps.InfoWindow({ 
+        content: contentString 
+    }); 
+
+        var marker = new google.maps.Marker({ 
+        position: myLatlng, 
+        map: map, 
+        title:"Salvador" 
+    }); 
+
+        google.maps.event.addListener(marker, 'click', function() { 
+        infowindow.open(map,marker); 
+    });
+
+
+    }
+    </script>
+  </head>
+  <body onload="initialize()" onunload="GUnload()">
+    <div id="map_canvas" style="width: 500px; height: 300px"></div>
+  </body>
+</html>

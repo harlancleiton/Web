@@ -1,0 +1,75 @@
+<doctype! html>
+
+<html>
+	<head>
+		<title>Cadastrar Jogo</title>
+		<meta chartset="UTF-8"/>
+	</head>
+
+	<body>
+		<h1>Cadastrar Jogo</h1>
+		<table width="100%" border=0 bgcolor=White>
+			<tr align="center">
+				<td width=77 bgcolor="#EEE5DE"><a href="index.html">Home</a></td>
+				<td width=77 bgcolor="#EEE5DE"><a href="cadastrarJogo.html">Cadastrar um Jogo</a></td>
+				<td width=77 bgcolor="#EEE5DE"><a href="meusJogos.html">Meus Jogos</a></td>
+				<td width=77 bgcolor="#EEE5DE"><a href="imagens.html">Imagens</a></td>
+			</tr>
+		</table>
+		<form>
+			<table>
+				<tr>
+					<td>Nome</td>
+					<td><input type="text" name="nome"/></td>
+				</tr>
+				<tr>
+					<td rowspan="6">Gênero</td>
+					<td><input type="radio" name="genero"/>Ação</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="genero"/>Aventura</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="genero"/>FPS</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="genero"/>RPG</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="genero"/>Estratégia</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="genero"/>Esportes</td>
+				</tr>
+				<tr>
+					<td rowspan="3">Plataforma</td>
+					<td><input type="checkbox" name="plataforma"/>Xbox One</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="plataforma"/>PS4</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="plataforma"/>PC</td>
+				</tr>
+				<tr>
+					<td>Ano de lançamento</td>
+					<td>
+						<select>
+							<option>2014</option>
+							<option>2015</option>
+							<option>2016</option>
+							<option>2017</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<th><input type="submit" name="cadastrar" value="Cadastrar"></th>
+					<th><input type="button" name="cancelar" value="Cancelar"></th>
+					<th><input type="reset" name="limpar" value="Limpar"></th>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

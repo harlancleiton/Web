@@ -1,0 +1,36 @@
+#nvJogo{
+	width: 200px;
+}
+#divCenario{
+	float: left;
+	width: auto;
+	height: 500px;
+	background: #FFF;
+	border: solid 1px #A2A2A2;
+}
+#divCronometro{
+	width: 140px;
+	height: 132px;
+	border: 1px solid #000;
+	background: url('../imagens/cronometro.png');
+	text-align: center;
+
+}
+#tempoRestante{
+	display: block;
+	padding-top: 50%px;
+	color:red;
+	font-size: 30px;
+
+}
+#cenarioJogo{
+	float: left;
+	width: 600px;
+	height: 500px;
+	background: url('../imagens/cenario.png');
+	background-position: bottom;
+}
+#qtdeBaloes,#qtdeBaloesEstourados{
+	font-size: 20px;
+	margin: 5px;
+}

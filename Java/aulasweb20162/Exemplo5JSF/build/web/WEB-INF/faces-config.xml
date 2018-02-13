@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE faces-config PUBLIC "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN" "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+<faces-config>
+
+	<!-- Navigation rules -->
+	<navigation-rule>
+		<description>Lista dos books</description>
+		<from-view-id>/listarBooks.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>addBook</from-outcome>
+			<to-view-id>/adicionarBook.jsp</to-view-id>
+		</navigation-case>
+        <navigation-case>
+			<from-outcome>editBook</from-outcome>
+			<to-view-id>/editarBook.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<description>Adicionar ou editar um book</description>
+		<from-view-id>/editarBook.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>listBooks</from-outcome>
+			<to-view-id>/listarBooks.jsp</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+
+<navigation-rule>
+		<description>Adicionar ou editar book</description>
+		<from-view-id>/adicionarBook.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>listBooks</from-outcome>
+			<to-view-id>/listarBooks.jsp</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+
+
+	<!-- Managed beans -->
+	<managed-bean>
+		<description>
+			Book bean
+		</description>
+		<managed-bean-name>bookBean</managed-bean-name>
+		<managed-bean-class>bean.Book</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>
+	
+	<managed-bean>
+		<description>
+			BookList Bean
+		</description>
+		<managed-bean-name>bookListBean</managed-bean-name>
+		<managed-bean-class>bean.BookList</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope> 
+	</managed-bean>
+	
+</faces-config>
+

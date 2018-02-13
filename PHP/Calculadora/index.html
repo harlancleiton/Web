@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Calculadora PHP</title>
+	</head>
+	<body>
+		<form method="post" action="calcular.php">
+			<label>Número 1
+				<input type="text" name="numero1">
+			</label>
+			<br/>
+			<label>Número 2
+				<input type="text" name="numero2">
+			</label>
+			<br/>
+			<label>Operação</label>
+			<label><input type="radio" name="operacao" value="soma">Soma</label>
+			<label><input type="radio" name="operacao" value="subtracao">Subtração</label>
+			<label><input type="radio" name="operacao" value="multiplicacao">Multiplicação</label>
+			<label><input type="radio" name="operacao" value="divisao">Divisão</label>
+			<br/>
+			<label><input type="submit" name="calcular" value="Calcular"></label>
+		</form>
+	</body>
+</html>

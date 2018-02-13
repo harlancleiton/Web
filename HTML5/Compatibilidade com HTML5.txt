@@ -1,0 +1,6 @@
+<!--[if IE]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+https://github.com/aFarkas/html5shiv
+https://github.com/aFarkas/html5shiv/blob/master/dist/html5shiv.min.js
